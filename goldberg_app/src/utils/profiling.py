@@ -49,14 +49,14 @@ class Stopwatch:
     print(ss.tic_tocs)
     """
 
-    def __init__(self, start=False, _func=time.perf_counter):
-
+    def __init__(self, start=False, name=None, _func=time.perf_counter):
+        self.name = name
+        self.elapsed = 0.0
+        self.tic_tocs = []
         self._func = _func
         self._start = None
         self._tics = []
         self._tocs = []
-        self.elapsed = 0.0
-        self.tic_tocs = []
         if start:
             self.start()
 

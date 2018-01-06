@@ -12,7 +12,7 @@ class StopwatchTest(unittest.TestCase):
     #@unittest.skip('Skipped.')
     def test_basic_behavior(self):
 
-        ss_1 = Stopwatch()
+        ss_1 = Stopwatch(name='test_1')
         ss_1.start()
 
         ss_1.tic()
@@ -27,7 +27,7 @@ class StopwatchTest(unittest.TestCase):
 
         self.assertEqual(2, len(tic_tocs))
 
-        print('success...')
+        print('...success: Stopwatch basic function: %s %s' % (ss_1.name, str(ss_1.tic_tocs)))
 
 
 if __name__ == '__main__':
